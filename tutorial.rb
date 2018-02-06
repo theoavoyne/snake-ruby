@@ -10,13 +10,13 @@ class Tutorial < Gosu::Window
   def update
     if @player.game_over
     elsif Gosu.button_down? Gosu::KB_LEFT or Gosu::button_down? Gosu::GP_LEFT
-      @player.turn_left
+      @player.turn("left") unless @player.sens == "right"
     elsif Gosu.button_down? Gosu::KB_RIGHT or Gosu::button_down? Gosu::GP_RIGHT
-      @player.turn_right
+      @player.turn("right") unless @player.sens == "left"
     elsif Gosu.button_down? Gosu::KB_UP or Gosu::button_down? Gosu::GP_UP
-      @player.turn_up
+      @player.turn("up") unless @player.sens == "down"
     elsif Gosu.button_down? Gosu::KB_DOWN or Gosu::button_down? Gosu::GP_DOWN
-      @player.turn_down
+      @player.turn("down") unless @player.sens == "up"
     end
     @player.move
     @player.feed(@food)

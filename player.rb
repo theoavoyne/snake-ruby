@@ -1,7 +1,7 @@
 class Player
-  attr_reader :game_over, :score
+  attr_reader :game_over, :score, :sens
   def initialize
-    @image = Gosu::Image.new("media/starfighter.bmp")
+    @image = Gosu::Image.new("media/square.bmp")
     @vel = 16
     @sens = "right"
     @snake = [[0, 0]]
@@ -9,20 +9,8 @@ class Player
     @score = 0
   end
 
-  def turn_left
-    @sens = "left" unless @sens == "right"
-  end
-
-  def turn_right
-    @sens = "right" unless @sens == "left"
-  end
-
-  def turn_up
-    @sens = "up" unless @sens == "down"
-  end
-
-  def turn_down
-    @sens = "down" unless @sens == "up"
+  def turn(dir)
+    @sens = dir
   end
 
   def move
@@ -47,18 +35,17 @@ class Player
       @game_over = true
     else
       @snake.insert(0, new_pos)
-      @snake.pop unless @add
+      @snake.pop unless @add_square
     end
-    @add = false
+    @add_square = false
   end
 
   def feed(food)
     @snake.each do |x, y|
-      if food.x == x && food.y == y
-        food.x = (1...40).to_a.sample * 16
-        food.y = (1...30).to_a.sample * 16
+      if [food.x, food.y] == [x, y]
+        food.pos_init
         @score += 1
-        @add = true
+        @add_square = true
       end
     end
   end

@@ -1,7 +1,11 @@
 class Food
   attr_accessor :x, :y
   def initialize
-    @image = Gosu::Image.new("media/starfighter.bmp")
+    @image = Gosu::Image.new("media/food.bmp")
+    pos_init
+  end
+
+  def pos_init
     @x = (1...40).to_a.sample * 16
     @y = (1...30).to_a.sample * 16
   end
