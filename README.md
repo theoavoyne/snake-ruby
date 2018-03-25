@@ -10,10 +10,10 @@ Ruby 2.4.3
 
 ### Installing
 
-Clone the repository on your local machine and run:
+Clone the repository on your local machine, move inside the repository and run this command:
 
 ```
-ruby snake-ruby
+ruby app.rp
 ```
 
 ## Built with
