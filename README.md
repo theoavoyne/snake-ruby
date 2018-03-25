@@ -2,10 +2,6 @@
 
 Ruby Snakes game.
 
-## Website
-
-[www.gamiflex.com](http://www.gamiflex.com/)
-
 ## Built with
 
 * [Ruby](https://www.ruby-lang.org/fr/)
