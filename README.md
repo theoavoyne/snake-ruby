@@ -6,7 +6,9 @@ Ruby Snakes game.
 
 ### Prerequisites
 
+```
 Ruby 2.4.3
+```
 
 ### Installing
 
