@@ -12,9 +12,9 @@ Ruby 2.4.3
 
 Clone the repository on your local machine and run:
 
-`` 
+```
 ruby snake-ruby
-``
+```
 
 ## Built with
 
