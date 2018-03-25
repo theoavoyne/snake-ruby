@@ -15,7 +15,7 @@ Ruby 2.4.3
 Clone the repository on your local machine, move inside the repository and run this command:
 
 ```
-ruby app.rp
+ruby app.rb
 ```
 
 ## Built with
