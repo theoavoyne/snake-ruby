@@ -1,6 +1,6 @@
 # Snakes Game
 
-Snakes game written in Ruby.
+Ruby Snakes game.
 
 ## Website
 
